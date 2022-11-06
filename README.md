@@ -22,8 +22,8 @@ Použité technologie a postupy : programovací jazyk kotlin, XML, IDE - Android
                      připravení prezentace X
 
 Zdroj informací :
-https://www.w3schools.com/kotlin/
 
+https://www.w3schools.com/kotlin/
 https://www.youtube.com/watch?v=8obgNNlj3Eo&ab_channel=AllCodingTutorials
 
 
