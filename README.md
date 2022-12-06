@@ -6,10 +6,12 @@ Autoři projektu : Tomáš Kolečkář
 
 Konzultanti : Marek Lučný
 
-| Použité technologie a postupy |
-|programovací jazyk kotlin|
-|SQLite|
-|XML|
+Použité technologie:
+- [Kotlin]
+- [Github]
+- [XML]
+- [Android studio]
+
 
 | Časový harmonogram : | 
 
