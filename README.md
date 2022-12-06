@@ -6,9 +6,14 @@ Autoři projektu : Tomáš Kolečkář
 
 Konzultanti : Marek Lučný
 
-Použité technologie a postupy : programovací jazyk kotlin, XML, IDE - Android Studio, SQLite
+Použité technologie:
+- Kotlin
+- Github
+- XML
+- Android studio
 
-Časový harmonogram : 
+
+| Časový harmonogram : | 
 
                      seznámení se s jazykem kotlin a vývojovým prostředím ✓
                      promyšlení fungování aplikace, její funkce a využití ✓
@@ -21,11 +26,9 @@ Použité technologie a postupy : programovací jazyk kotlin, XML, IDE - Android
                      dokončení dokumentace X
                      připravení prezentace X
 
-Zdroj informací :
+| Zdroj |
+| ------ |
+| [Registration system](https://www.youtube.com/watch?v=8obgNNlj3Eo&ab_channel=AllCodingTutorials) |
+| [w3schools](https://www.w3schools.com/kotlin) |
+| [Stackoverflow](https://stackoverflow.com/) |
 
-https://www.w3schools.com/kotlin
-
-https://www.youtube.com/watch?v=8obgNNlj3Eo&ab_channel=AllCodingTutorials
-
-
-  
