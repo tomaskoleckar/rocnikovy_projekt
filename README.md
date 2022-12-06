@@ -21,17 +21,9 @@ Použité technologie a postupy : programovací jazyk kotlin, XML, IDE - Android
                      dokončení dokumentace X
                      připravení prezentace X
 
-Zdroj informací :
-
-https://www.w3schools.com/kotlin
-
-https://www.youtube.com/watch?v=8obgNNlj3Eo&ab_channel=AllCodingTutorials
-
-
-  
 | Zdroj | Odkaz |
 | ------ | ------ |
-| Youtube - Python Tutorial | [Click here](https://www.youtube.com/watch?v=rfscVS0vtbw) |
-| Youtube - Django Tutorial | [Click here](https://www.youtube.com/watch?v=F5mRW0jo-U4) |
-| Stackoverflow - většina problémů | [Click here](https://stackoverflow.com/) |
-| Hygraph - REST API VS GraphQL | [Click here](https://www.section.io/engineering-education/integrating-graphql-api-in-a-django-application/) |
+| [Registration system](https://www.youtube.com/watch?v=rfscVS0vtbw) |
+| [w3schools](https://www.w3schools.com/kotlin) |
+| [Stackoverflow](https://stackoverflow.com/) |
+
