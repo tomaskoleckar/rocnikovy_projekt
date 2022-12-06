@@ -7,10 +7,10 @@ Autoři projektu : Tomáš Kolečkář
 Konzultanti : Marek Lučný
 
 Použité technologie:
-- [Kotlin]
-- [Github]
-- [XML]
-- [Android studio]
+- Kotlin
+- Github
+- XML
+- Android studio
 
 
 | Časový harmonogram : | 
