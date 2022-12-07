@@ -32,5 +32,6 @@ Použité technologie:
 | [w3schools](https://www.w3schools.com/kotlin) |
 | [Stackoverflow](https://stackoverflow.com/) |
 | [Calendar](https://www.youtube.com/watch?v=Ba0Q-cK1fJo&ab_channel=CodeWithCal) |
+| [SQLite](https://www.youtube.com/watch?v=312RhjfetP8&ab_channel=freeCodeCamp.org) |
 
 
