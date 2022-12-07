@@ -9,6 +9,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.wgg_v01.DBHelper
 import com.example.wgg_v01.R
+import com.example.wgg_v01.HomeActivity
 
 class LoginActivity : AppCompatActivity() {
     var username: EditText? = null
