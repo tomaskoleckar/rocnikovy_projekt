@@ -33,5 +33,7 @@ Použité technologie:
 | [Stackoverflow](https://stackoverflow.com/) |
 | [Calendar](https://www.youtube.com/watch?v=Ba0Q-cK1fJo&ab_channel=CodeWithCal) |
 | [SQLite](https://www.youtube.com/watch?v=312RhjfetP8&ab_channel=freeCodeCamp.org) |
+| [Room database](https://www.youtube.com/watch?v=lwAvI3WDXBY&list=PLSrm9z4zp4mEPOfZNV9O-crOhoMa0G2-o&ab_channel=Stevdza-San) |
+
 
 
