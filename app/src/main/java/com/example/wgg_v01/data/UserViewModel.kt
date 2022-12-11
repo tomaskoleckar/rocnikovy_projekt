@@ -10,7 +10,7 @@ import kotlinx.coroutines.launch
 
 class UserViewModel(application: Application): AndroidViewModel(application) {
 
-    private val readALlData: LiveData<List<User>>
+    val readALlData: LiveData<List<User>>
     private val repository: UserRepository
 
 
@@ -24,5 +24,9 @@ class UserViewModel(application: Application): AndroidViewModel(application) {
         viewModelScope.launch(Dispatchers.IO){
             repository.addUser(user)
         }
+    }
+
+    fun readAllData(username: String, password: String){
+        println(readALlData)
     }
 }
