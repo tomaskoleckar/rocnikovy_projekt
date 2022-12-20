@@ -9,13 +9,12 @@ import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.wgg_v01.ui.calendar.CalendarAdapter
-import com.example.wgg_v01.ui.calendar.CalendarAdapter.OnItemListener
+import com.example.wgg_v01.calendar.CalendarAdapter
 import java.time.LocalDate
 import java.time.YearMonth
 import java.time.format.DateTimeFormatter
 
-class CalendarActivity : AppCompatActivity(), OnItemListener {
+class CalendarActivity : AppCompatActivity(), CalendarAdapter.OnItemListener {
     private var monthYearText: TextView? = null
     private var calendarRecyclerView: RecyclerView? = null
     private var selectedDate: LocalDate? = null

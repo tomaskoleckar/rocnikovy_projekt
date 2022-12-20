@@ -20,13 +20,6 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".CalendarActivity"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
             android:name=".HomeActivity"
             android:exported="false">
             <meta-data
@@ -34,9 +27,12 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".ui.login.LoginActivity"
-            android:exported="false"
-            android:label="@string/title_activity_login" />
+            android:name=".CalendarActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
         <activity
             android:name=".MainActivity"
             android:exported="true">

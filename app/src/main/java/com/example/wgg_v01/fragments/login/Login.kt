@@ -1,6 +1,5 @@
 package com.example.wgg_v01.fragments.login
 
-import android.app.Application
 import android.content.Intent
 import android.os.Bundle
 import android.text.TextUtils
@@ -9,15 +8,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
-import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
-import com.example.wgg_v01.CalendarActivity
 import com.example.wgg_v01.HomeActivity
-import com.example.wgg_v01.MainActivity
 import com.example.wgg_v01.R
 import com.example.wgg_v01.data.User
 import com.example.wgg_v01.data.UserDataBase
-import com.example.wgg_v01.data.UserViewModel
 import kotlinx.android.synthetic.main.fragment_login.*
 import kotlinx.android.synthetic.main.fragment_login.view.*
 import kotlinx.coroutines.Dispatchers
@@ -27,7 +22,6 @@ import kotlinx.coroutines.withContext
 
 class Login : Fragment() {
 
-    private lateinit var mUserViewModel: UserViewModel
     private lateinit var userDB: UserDataBase
 
     override fun onCreateView(
@@ -41,8 +35,6 @@ class Login : Fragment() {
         }
 
 
-        mUserViewModel = ViewModelProvider(this)[UserViewModel::class.java]
-
         view.loginBtn.setOnClickListener{
 
             readData()
@@ -54,7 +46,7 @@ class Login : Fragment() {
             findNavController().navigate(R.id.action_login2_to_registration)
         }
 
-        mUserViewModel = ViewModelProvider(this).get(UserViewModel::class.java)
+
 
 
 

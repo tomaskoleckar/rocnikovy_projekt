@@ -1,41 +1,31 @@
 package com.example.wgg_v01
 
-import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
-import android.widget.Button
+import androidx.appcompat.app.AppCompatActivity
+import androidx.navigation.NavController
+import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.fragment.findNavController
+import androidx.navigation.ui.setupActionBarWithNavController
+import kotlinx.android.synthetic.main.activity_home.*
+
 
 class HomeActivity : AppCompatActivity() {
 
-    var trainBtn: Button? = null
-    var calendarBtn: Button? = null
-    var performanceBtn: Button? = null
+    private lateinit var navController: NavController
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
 
-        trainBtn = findViewById<View>(R.id.startBtn) as Button
-        calendarBtn = findViewById<View>(R.id.calendarBtn) as Button
-        performanceBtn = findViewById<View>(R.id.performanceBtn) as Button
+        val navHostFragment = supportFragmentManager.findFragmentById(R.id.fragmentHome) as NavHostFragment
+        navController = navHostFragment.findNavController()
 
-
-
-
-        trainBtn!!.setOnClickListener(){
-            setContentView(R.layout.select_traintype)
-        }
-        calendarBtn!!.setOnClickListener(){
-            val intent = Intent(applicationContext, CalendarActivity::class.java)
-            startActivity(intent)
-        }
-        performanceBtn!!.setOnClickListener(){
-            val intent = Intent(applicationContext, PerformanceActivity::class.java)
-            startActivity(intent)
-        }
-
-
+        setSupportActionBar(toolbarHome)
+        setupActionBarWithNavController(navController)
     }
 
+
+    override fun onSupportNavigateUp(): Boolean {
+        return navController.navigateUp() || super.onSupportNavigateUp()
+    }
 }

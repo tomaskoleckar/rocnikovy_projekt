@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/home_nav"
+    app:startDestination="@id/fragmentHome">
+
+    <fragment
+        android:id="@+id/fragmentHome"
+        android:name="com.example.wgg_v01.fragments.home.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_fragmentHome_to_trainType"
+            app:destination="@id/trainType" />
+        <action
+            android:id="@+id/action_fragmentHome_to_calendar"
+            app:destination="@id/calendar" />
+    </fragment>
+    <fragment
+        android:id="@+id/trainType"
+        android:name="com.example.wgg_v01.fragments.home.TrainType"
+        android:label="fragment_train_type"
+        tools:layout="@layout/fragment_train_type" >
+        <action
+            android:id="@+id/action_trainType_to_fragmentHome"
+            app:destination="@id/fragmentHome" />
+    </fragment>
+    <fragment
+        android:id="@+id/calendar"
+        android:name="com.example.wgg_v01.CalendarActivity"
+        android:label="fragment_calendar"
+        tools:layout="@layout/activity_calendar" >
+        <action
+            android:id="@+id/action_calendar_to_fragmentHome"
+            app:destination="@id/fragmentHome" />
+    </fragment>
+</navigation>

@@ -1,4 +1,4 @@
-package com.example.wgg_v01.ui.calendar
+package com.example.wgg_v01.calendar
 
 import androidx.recyclerview.widget.RecyclerView
 import android.view.ViewGroup

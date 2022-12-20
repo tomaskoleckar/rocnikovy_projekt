@@ -1,11 +1,11 @@
-package com.example.wgg_v01.ui.calendar
+package com.example.wgg_v01.calendar
 
 
 import android.view.View
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.wgg_v01.R
-import com.example.wgg_v01.ui.calendar.CalendarAdapter.OnItemListener
+import com.example.wgg_v01.calendar.CalendarAdapter.OnItemListener
 
 
 class CalendarViewHolder internal constructor(itemView: View, onItemListener: OnItemListener) :
