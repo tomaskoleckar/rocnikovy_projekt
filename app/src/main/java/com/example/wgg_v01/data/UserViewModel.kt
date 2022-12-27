@@ -11,6 +11,9 @@ import kotlinx.coroutines.launch
 class UserViewModel(application: Application): AndroidViewModel(application) {
 
     val readALlData: LiveData<List<User>>
+
+    val readAllExe: LiveData<List<Exercise>>
+
     private val repository: UserRepository
 
 
@@ -18,6 +21,7 @@ class UserViewModel(application: Application): AndroidViewModel(application) {
         val userDao = UserDataBase.getDatabase(application).userDao()
         repository = UserRepository(userDao)
         readALlData = repository.readAllData
+        readAllExe = repository.readAllExe
     }
 
     fun addUser(user: User){
@@ -29,4 +33,9 @@ class UserViewModel(application: Application): AndroidViewModel(application) {
     fun readAllData(username: String, password: String){
         println(readALlData)
     }
+
+    fun readAllExe(){
+        println(readAllExe)
+    }
+
 }

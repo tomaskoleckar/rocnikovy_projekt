@@ -5,9 +5,11 @@ import android.service.autofill.UserData
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
+import com.example.wgg_v01.data.realtions.UserExerciseRef
+import com.example.wgg_v01.data.realtions.UserWithExercises
 
 
-@Database(entities = [User::class], version = 1, exportSchema = false)
+@Database(entities = [User::class,Exercise::class,UserExerciseRef::class], version = 2, exportSchema = false)
 abstract class UserDataBase: RoomDatabase(){
 
     abstract fun userDao(): UserDao
@@ -27,7 +29,7 @@ abstract class UserDataBase: RoomDatabase(){
                 context.applicationContext,
                 UserDataBase::class.java,
                 "users"
-            ).build()
+            ).createFromAsset("database/users.db").build()
             INSTANCE = instance
             return instance
         }
