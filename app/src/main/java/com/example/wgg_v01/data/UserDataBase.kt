@@ -9,7 +9,7 @@ import com.example.wgg_v01.data.realtions.UserExerciseRef
 import com.example.wgg_v01.data.realtions.UserWithExercises
 
 
-@Database(entities = [User::class,Exercise::class,UserExerciseRef::class], version = 2, exportSchema = false)
+@Database(entities = [User::class,Exercise::class,UserExerciseRef::class], version = 3, exportSchema = false)
 abstract class UserDataBase: RoomDatabase(){
 
     abstract fun userDao(): UserDao
@@ -29,7 +29,7 @@ abstract class UserDataBase: RoomDatabase(){
                 context.applicationContext,
                 UserDataBase::class.java,
                 "users"
-            ).createFromAsset("database/users.db").build()
+            ).createFromAsset("database/users.db").fallbackToDestructiveMigration().build()
             INSTANCE = instance
             return instance
         }

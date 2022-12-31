@@ -25,6 +25,9 @@
         <action
             android:id="@+id/action_trainType_to_fragmentHome"
             app:destination="@id/fragmentHome" />
+        <action
+            android:id="@+id/action_trainType_to_setPerfFragment"
+            app:destination="@id/setPerfFragment" />
     </fragment>
     <fragment
         android:id="@+id/calendar"
@@ -34,5 +37,14 @@
         <action
             android:id="@+id/action_calendar_to_fragmentHome"
             app:destination="@id/fragmentHome" />
+    </fragment>
+    <fragment
+        android:id="@+id/setPerfFragment"
+        android:name="com.example.wgg_v01.fragments.home.SetPerfFragment"
+        android:label="fragment_set_perf"
+        tools:layout="@layout/fragment_set_perf" >
+        <action
+            android:id="@+id/action_setPerfFragment_to_trainType"
+            app:destination="@id/trainType" />
     </fragment>
 </navigation>

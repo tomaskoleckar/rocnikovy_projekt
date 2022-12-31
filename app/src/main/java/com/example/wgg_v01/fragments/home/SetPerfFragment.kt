@@ -6,15 +6,14 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
-import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.navigation.fragment.findNavController
 import com.example.wgg_v01.R
 import com.example.wgg_v01.data.UserViewModel
-import kotlinx.android.synthetic.main.fragment_train_type.view.*
-import kotlinx.android.synthetic.main.select_traintype.*
+import kotlinx.android.synthetic.main.fragment_set_perf.*
+import kotlinx.android.synthetic.main.fragment_set_perf.view.*
 
-class TrainType : Fragment() {
+class SetPerfFragment : Fragment() {
 
     private lateinit var mUserViewModel: UserViewModel
 
@@ -23,19 +22,22 @@ class TrainType : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        val view = inflater.inflate(R.layout.fragment_train_type, container, false)
-
-        val adapter = ExeAdapter()
-        val recyclerView = view.recyclerView
-        recyclerView.adapter = adapter
-        recyclerView.layoutManager = LinearLayoutManager(requireContext())
+        val view = inflater.inflate(R.layout.fragment_set_perf, container, false)
 
         mUserViewModel = ViewModelProvider(this).get(UserViewModel::class.java)
-        mUserViewModel.readAllExe.observe(viewLifecycleOwner, Observer{ exercise ->
-            adapter.setData(exercise)
-        })
+
+        view.submitBtn.setOnClickListener(){
+            insertDataToDatabase()
+            findNavController().navigate(R.id.action_setPerfFragment_to_trainType)
+        }
+
+        view.exerciseText.text = arguments?.getString("exerciseName").toString()
 
         return view
+    }
+
+    private fun insertDataToDatabase() {
+
     }
 
 }

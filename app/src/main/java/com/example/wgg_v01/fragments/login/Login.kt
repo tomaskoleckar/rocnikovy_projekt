@@ -10,6 +10,7 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.navigation.fragment.findNavController
 import com.example.wgg_v01.HomeActivity
+import com.example.wgg_v01.MyApp.Companion.loggedUser
 import com.example.wgg_v01.R
 import com.example.wgg_v01.data.User
 import com.example.wgg_v01.data.UserDataBase
@@ -60,6 +61,7 @@ class Login : Fragment() {
             val password = password2.text.toString()
             if(username == user.username && password == user.password){
                 Toast.makeText(requireContext(), "Successfully logged in !", Toast.LENGTH_LONG).show()
+                loggedUser = user.userId.toString()
                 val intent = Intent(context, HomeActivity::class.java)
                 startActivity(intent)
             }

@@ -27,7 +27,6 @@ class HomeFragment : Fragment() {
 
         view.calendarBtn.setOnClickListener{
             val intent = Intent(context, CalendarActivity::class.java)
-            println("TEST")
             startActivity(intent)
         }
 

@@ -1,6 +1,7 @@
 package com.example.wgg_v01.data.realtions
 
 import androidx.room.Entity
+import java.util.Date
 
 
 @Entity(primaryKeys = ["userId", "exerciseId"])
