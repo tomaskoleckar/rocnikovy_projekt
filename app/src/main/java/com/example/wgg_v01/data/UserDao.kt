@@ -36,6 +36,6 @@ interface UserDao {
     fun getExercisesOfUsers(): LiveData<List<UserExerciseRef>>
 
     @Query("SELECT * FROM usersRef WHERE userId = :userId AND exerciseName = :exerciseName")
-    suspend fun getPerfData(userId: Int, exerciseName: String): LiveData<List<UserExerciseRef>>
+    fun getPerfData(userId: Int, exerciseName: String): LiveData<List<UserExerciseRef>>
 
 }

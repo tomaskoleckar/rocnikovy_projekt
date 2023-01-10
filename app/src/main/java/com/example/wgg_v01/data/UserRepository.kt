@@ -18,7 +18,7 @@ class UserRepository(private val userDao: UserDao) {
     suspend fun insertUserExerciseRef(crossRef: UserExerciseRef){
         userDao.insertUserExerciseRef(crossRef)
     }
-    suspend fun getPerfData(userId: Int, exerciseName: String): LiveData<List<UserExerciseRef>>{
+    fun getPerfData(userId: Int, exerciseName: String): LiveData<List<UserExerciseRef>>{
         return userDao.getPerfData(userId,exerciseName)
     }
 }

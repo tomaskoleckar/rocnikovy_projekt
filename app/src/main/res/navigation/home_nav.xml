@@ -76,7 +76,7 @@
     </fragment>
     <fragment
         android:id="@+id/perfData"
-        android:name="com.example.wgg_v01.PerfData"
+        android:name="com.example.wgg_v01.fragments.performance.PerfData"
         android:label="fragment_perf_data"
         tools:layout="@layout/fragment_perf_data" >
         <action

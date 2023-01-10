@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".PerfData">
+    tools:context=".HomeActivity">
 
 
     <TextView
@@ -17,7 +17,7 @@
         android:text="Shoulder press"
         android:textAlignment="center"
         android:textSize="40dp"
-        app:layout_constraintBottom_toTopOf="@+id/recyclerView3"
+        app:layout_constraintBottom_toTopOf="@+id/perfRecycle"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
