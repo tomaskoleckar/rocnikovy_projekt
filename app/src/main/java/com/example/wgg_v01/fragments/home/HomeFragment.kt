@@ -30,6 +30,9 @@ class HomeFragment : Fragment() {
             startActivity(intent)
         }
 
+        view.performanceBtn.setOnClickListener{
+            findNavController().navigate(R.id.action_fragmentHome_to_performanceFragment)
+        }
 
 
         return view

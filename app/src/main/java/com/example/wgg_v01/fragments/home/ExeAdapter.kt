@@ -7,16 +7,16 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
+import com.example.wgg_v01.MyApp.Companion.currentFragment
 import com.example.wgg_v01.R
 import com.example.wgg_v01.data.Exercise
 import kotlinx.android.synthetic.main.select_traintype.view.*
 
-class ExeAdapter: RecyclerView.Adapter<ExeAdapter.MyViewHolder>() {
+class ExeAdapter() : RecyclerView.Adapter<ExeAdapter.MyViewHolder>() {
 
     private var exeList = emptyList<Exercise>()
 
     class MyViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {}
-
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
         return MyViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.select_traintype, parent, false))
@@ -28,7 +28,14 @@ class ExeAdapter: RecyclerView.Adapter<ExeAdapter.MyViewHolder>() {
         holder.itemView.exercise1.setOnClickListener(){
             val bundle = Bundle()
             bundle.putString("exerciseName", holder.itemView.exercise1.text.toString())
-            holder.itemView.findNavController().navigate(R.id.action_trainType_to_setPerfFragment, bundle)
+            bundle.putString("exePart", currentItem.part)
+            if(currentFragment == "train") {
+                holder.itemView.findNavController()
+                    .navigate(R.id.action_trainType_to_setPerfFragment, bundle)
+            }
+            else if(currentFragment == "perf"){
+
+            }
         }
 
     }

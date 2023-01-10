@@ -1,13 +1,17 @@
 package com.example.wgg_v01.data.realtions
 
 import androidx.room.Entity
+import androidx.room.PrimaryKey
 import java.util.Date
 
 
-@Entity(primaryKeys = ["userId", "exerciseId"])
+@Entity(tableName = "usersRef")
 data class UserExerciseRef(
+    @PrimaryKey(autoGenerate = true)
+    val userExId: Int,
     val userId: Int,
-    val exerciseId: Int,
+    val exerciseName: String,
+    val exercisePart: String,
     val date: String,
     val weight: Int,
     val series: Int,

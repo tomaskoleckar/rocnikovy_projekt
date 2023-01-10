@@ -16,6 +16,9 @@
         <action
             android:id="@+id/action_fragmentHome_to_calendar"
             app:destination="@id/calendar" />
+        <action
+            android:id="@+id/action_fragmentHome_to_performanceFragment"
+            app:destination="@id/performanceFragment" />
     </fragment>
     <fragment
         android:id="@+id/trainType"
@@ -46,5 +49,38 @@
         <action
             android:id="@+id/action_setPerfFragment_to_trainType"
             app:destination="@id/trainType" />
+    </fragment>
+    <fragment
+        android:id="@+id/performanceFragment"
+        android:name="com.example.wgg_v01.fragments.performance.performanceFragment"
+        android:label="performanceFragment"
+        tools:layout="@layout/fragment_performance">
+        <action
+            android:id="@+id/action_performanceFragment_to_fragmentHome"
+            app:destination="@id/fragmentHome" />
+        <action
+            android:id="@+id/action_performanceFragment_to_allPerfFragment"
+            app:destination="@id/allPerfFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/allPerfFragment"
+        android:name="com.example.wgg_v01.fragments.performance.allPerfFragment"
+        android:label="allPerfFragment"
+        tools:layout="@layout/fragment_all_perf">
+        <action
+            android:id="@+id/action_allPerfFragment_to_performanceFragment"
+            app:destination="@id/performanceFragment" />
+        <action
+            android:id="@+id/action_allPerfFragment_to_perfData"
+            app:destination="@id/perfData" />
+    </fragment>
+    <fragment
+        android:id="@+id/perfData"
+        android:name="com.example.wgg_v01.PerfData"
+        android:label="fragment_perf_data"
+        tools:layout="@layout/fragment_perf_data" >
+        <action
+            android:id="@+id/action_perfData_to_allPerfFragment"
+            app:destination="@id/allPerfFragment" />
     </fragment>
 </navigation>

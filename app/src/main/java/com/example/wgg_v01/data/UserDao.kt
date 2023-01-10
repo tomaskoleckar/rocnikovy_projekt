@@ -32,7 +32,10 @@ interface UserDao {
     fun readAllExe(): LiveData<List<Exercise>>
 
     @Transaction
-    @Query("SELECT * FROM users WHERE username = :username")
-    suspend fun getExercisesOfUsers(username: String): List<UserWithExercises>
+    @Query("SELECT * FROM usersRef")
+    fun getExercisesOfUsers(): LiveData<List<UserExerciseRef>>
+
+    @Query("SELECT * FROM usersRef WHERE userId = :userId AND exerciseName = :exerciseName")
+    suspend fun getPerfData(userId: Int, exerciseName: String): LiveData<List<UserExerciseRef>>
 
 }
