@@ -26,7 +26,7 @@ class DataAdapter() : RecyclerView.Adapter<DataAdapter.MyViewHolder>() {
         val currentItem = perfList[position]
         holder.itemView.repsPerf.text = currentItem.reps.toString()
         holder.itemView.seriesPerf.text = currentItem.series.toString()
-        holder.itemView.weightPerf.text = currentItem.weight.toString()
+        holder.itemView.weightPerf.text = currentItem.weight.toString() + "kg"
 
     }
 

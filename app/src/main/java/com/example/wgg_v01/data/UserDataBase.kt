@@ -29,7 +29,7 @@ abstract class UserDataBase: RoomDatabase(){
                 context.applicationContext,
                 UserDataBase::class.java,
                 "users"
-            ).createFromAsset("database/users.db").fallbackToDestructiveMigration().build()
+            ).createFromAsset("database/users.db").build()
             INSTANCE = instance
             return instance
         }

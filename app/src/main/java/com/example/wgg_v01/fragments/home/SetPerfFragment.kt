@@ -33,7 +33,6 @@ class SetPerfFragment : Fragment() {
 
         view.submitBtn.setOnClickListener(){
             insertDataToDatabase()
-            findNavController().navigate(R.id.action_setPerfFragment_to_trainType)
         }
 
         view.exerciseText.text = arguments?.getString("exerciseName").toString()

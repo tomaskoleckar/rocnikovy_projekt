@@ -9,35 +9,60 @@
         android:id="@+id/weightPerf"
         android:layout_width="102dp"
         android:layout_height="48dp"
-        android:layout_marginStart="28dp"
         android:layout_marginTop="28dp"
+        android:layout_marginEnd="28dp"
         android:text="150kg"
         android:textAlignment="center"
         android:textSize="30dp"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/repsPerf"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/repsPerf"
-        android:layout_width="102dp"
-        android:layout_height="48dp"
+        android:layout_width="66dp"
+        android:layout_height="47dp"
         android:layout_marginTop="28dp"
-        android:layout_marginEnd="152dp"
-        android:text="5"
+        android:text="115"
         android:textAlignment="center"
         android:textSize="30dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.408"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/seriesPerf"
-        android:layout_width="102dp"
-        android:layout_height="48dp"
+        android:layout_width="47dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="28dp"
         android:layout_marginTop="28dp"
-        android:layout_marginEnd="28dp"
-        android:text="5"
+        android:text="15"
         android:textAlignment="center"
         android:textSize="30dp"
+        app:layout_constraintStart_toEndOf="@+id/repsPerf"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/changeBtn"
+        android:layout_width="44dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="12dp"
+        android:drawableRight="@drawable/ic_baseline_change_circle_24"
+        android:paddingRight="0dp"
+        android:background="@android:color/transparent"
+        app:layout_constraintEnd_toStartOf="@+id/deleteBtn"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/deleteBtn"
+        android:layout_width="44dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        android:background="@android:color/transparent"
+        android:drawableRight="@drawable/ic_baseline_delete_24"
+        android:paddingRight="0dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

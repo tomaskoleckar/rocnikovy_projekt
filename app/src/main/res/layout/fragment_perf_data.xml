@@ -42,6 +42,39 @@
         android:layout_marginBottom="1dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/weightText2"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/weightText2"
+        android:layout_width="69dp"
+        android:layout_height="27dp"
+        android:layout_marginStart="40dp"
+        android:text="Weight"
+        android:textSize="20dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/datePerf" />
+
+    <TextView
+        android:id="@+id/weightText3"
+        android:layout_width="69dp"
+        android:layout_height="27dp"
+        android:layout_marginStart="76dp"
+        android:text="Reps"
+        android:textSize="20dp"
+        app:layout_constraintStart_toEndOf="@+id/weightText2"
+        app:layout_constraintTop_toBottomOf="@+id/datePerf" />
+
+    <TextView
+        android:id="@+id/weightText5"
+        android:layout_width="69dp"
+        android:layout_height="27dp"
+        android:layout_marginStart="56dp"
+        android:text="Series"
+        android:textSize="20dp"
+        app:layout_constraintStart_toEndOf="@+id/weightText3"
+        app:layout_constraintTop_toBottomOf="@+id/datePerf" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

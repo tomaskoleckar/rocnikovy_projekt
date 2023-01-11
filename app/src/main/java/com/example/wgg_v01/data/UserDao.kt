@@ -35,7 +35,7 @@ interface UserDao {
     @Query("SELECT * FROM usersRef")
     fun getExercisesOfUsers(): LiveData<List<UserExerciseRef>>
 
-    @Query("SELECT * FROM usersRef WHERE userId = :userId AND exerciseName = :exerciseName")
+    @Query("SELECT * FROM usersRef WHERE userId = :userId AND exerciseName = :exerciseName ORDER BY userExId")
     fun getPerfData(userId: Int, exerciseName: String): LiveData<List<UserExerciseRef>>
 
 }
