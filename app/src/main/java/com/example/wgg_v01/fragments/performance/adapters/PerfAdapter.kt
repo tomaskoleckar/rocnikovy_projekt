@@ -42,7 +42,13 @@ class PerfAdapter() : RecyclerView.Adapter<PerfAdapter.MyViewHolder>() {
     }
 
     fun setData(userExerciseRef: List<UserExerciseRef>){
-        this.perfList = userExerciseRef
+        val uniqueDataSet = mutableListOf<UserExerciseRef>()
+        userExerciseRef.forEach { item ->
+            if(!uniqueDataSet.any { it.date == item.date && it.exerciseName == item.exerciseName}){
+                uniqueDataSet.add(item)
+            }
+        }
+        this.perfList = uniqueDataSet
         notifyDataSetChanged()
     }
 

@@ -3,7 +3,6 @@ package com.example.wgg_v01.data
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
-import kotlinx.android.parcel.Parcelize
 
 
 @Entity(tableName = "users")

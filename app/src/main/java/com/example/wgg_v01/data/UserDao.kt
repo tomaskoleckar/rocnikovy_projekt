@@ -10,7 +10,7 @@ import androidx.room.Transaction
 import androidx.room.Update
 import com.example.wgg_v01.data.realtions.UserExerciseRef
 import com.example.wgg_v01.data.realtions.UserWithExercises
-
+import java.util.concurrent.Flow
 
 
 @Dao
@@ -48,4 +48,7 @@ interface UserDao {
 
     @Query("SELECT * FROM usersRef WHERE userId = :userId AND exerciseName = :exerciseName ORDER BY userExId DESC")
     fun getExeData(userId: Int, exerciseName: String): LiveData<List<UserExerciseRef>>
+
+    @Query("SELECT * FROM exercises WHERE name LIKE :searchQuery OR part LIKE :searchQuery")
+    fun searchExe(searchQuery: String): LiveData<List<Exercise>>
 }

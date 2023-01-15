@@ -71,5 +71,8 @@ class UserViewModel(application: Application): AndroidViewModel(application) {
             repository.deletePerf(userExerciseRef)
         }
     }
+    fun searchExe(searchQuery: String): LiveData<List<Exercise>>{
+        return repository.searchExe(searchQuery)
+    }
 
 }

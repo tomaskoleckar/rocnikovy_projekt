@@ -31,4 +31,7 @@ class UserRepository(private val userDao: UserDao) {
     fun getExeData(userId: Int, exerciseName: String): LiveData<List<UserExerciseRef>>{
         return userDao.getExeData(userId,exerciseName)
     }
+    fun searchExe(searchQuery: String): LiveData<List<Exercise>>{
+        return userDao.searchExe(searchQuery)
+    }
 }
