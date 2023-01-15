@@ -8,7 +8,7 @@
 
 
     <TextView
-        android:id="@+id/exeName"
+        android:id="@+id/exeName2"
         android:layout_width="224dp"
         android:layout_height="0dp"
         android:layout_marginStart="92dp"
@@ -17,24 +17,11 @@
         android:text="Shoulder press"
         android:textAlignment="center"
         android:textSize="40dp"
-        app:layout_constraintBottom_toTopOf="@+id/perfRecycle"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/datePerf"
-        android:layout_width="224dp"
-        android:layout_height="58dp"
-        android:layout_marginStart="92dp"
-        android:layout_marginTop="104dp"
-        android:text="10.01.2023"
-        android:textAlignment="center"
-        android:textSize="40dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/perfRecycle"
+        android:id="@+id/exeRecycle"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="1dp"
@@ -44,37 +31,47 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/weightText2"
+        app:layout_constraintTop_toBottomOf="@+id/exeWeightText"
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
-        android:id="@+id/weightText2"
+        android:id="@+id/exeWeightText"
+        android:layout_width="69dp"
+        android:layout_height="27dp"
+        android:layout_marginStart="60dp"
+        android:text="Weight"
+        android:textSize="20dp"
+        app:layout_constraintStart_toEndOf="@+id/exeDateText"
+        app:layout_constraintTop_toBottomOf="@+id/exeName2" />
+
+    <TextView
+        android:id="@+id/exeDateText"
         android:layout_width="69dp"
         android:layout_height="27dp"
         android:layout_marginStart="32dp"
-        android:text="Weight"
+        android:text="Date"
         android:textSize="20dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/datePerf" />
+        app:layout_constraintTop_toBottomOf="@+id/exeName2" />
 
     <TextView
-        android:id="@+id/weightText3"
+        android:id="@+id/exeRepsText"
         android:layout_width="69dp"
         android:layout_height="27dp"
-        android:layout_marginStart="52dp"
+        android:layout_marginStart="36dp"
         android:text="Reps"
         android:textSize="20dp"
-        app:layout_constraintStart_toEndOf="@+id/weightText2"
-        app:layout_constraintTop_toBottomOf="@+id/datePerf" />
+        app:layout_constraintStart_toEndOf="@+id/exeWeightText"
+        app:layout_constraintTop_toBottomOf="@+id/exeName2" />
 
     <TextView
-        android:id="@+id/weightText5"
+        android:id="@+id/exeSeriesText"
         android:layout_width="69dp"
         android:layout_height="27dp"
-        android:layout_marginStart="8dp"
+        android:layout_marginStart="12dp"
         android:text="Series"
         android:textSize="20dp"
-        app:layout_constraintStart_toEndOf="@+id/weightText3"
-        app:layout_constraintTop_toBottomOf="@+id/datePerf" />
+        app:layout_constraintStart_toEndOf="@+id/exeRepsText"
+        app:layout_constraintTop_toBottomOf="@+id/exeName2" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

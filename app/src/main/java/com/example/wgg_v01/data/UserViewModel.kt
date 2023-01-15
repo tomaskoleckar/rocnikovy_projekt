@@ -47,8 +47,11 @@ class UserViewModel(application: Application): AndroidViewModel(application) {
         }
     }
 
-    fun getPerfData(userId: Int, exerciseName: String): LiveData<List<UserExerciseRef>>{
-        return repository.getPerfData(userId,exerciseName)
+    fun getPerfData(userId: Int, exerciseName: String, date: String): LiveData<List<UserExerciseRef>>{
+        return repository.getPerfData(userId,exerciseName, date)
+    }
+    fun getExeData(userId: Int, exerciseName: String): LiveData<List<UserExerciseRef>>{
+        return repository.getExeData(userId,exerciseName)
     }
 
     fun readAllData(username: String, password: String){
@@ -58,6 +61,15 @@ class UserViewModel(application: Application): AndroidViewModel(application) {
     fun readAllExe(){
         println(readAllExe)
     }
-
+    fun updatePerf(userExerciseRef: UserExerciseRef){
+        viewModelScope.launch(Dispatchers.IO){
+            repository.updatePerf(userExerciseRef)
+        }
+    }
+    fun deletePerf(userExerciseRef: UserExerciseRef){
+        viewModelScope.launch(Dispatchers.IO){
+            repository.deletePerf(userExerciseRef)
+        }
+    }
 
 }

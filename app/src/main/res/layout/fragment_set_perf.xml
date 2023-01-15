@@ -23,6 +23,7 @@
         android:ems="10"
         android:textAlignment="center"
         android:inputType="text"
+        android:text="15.1.2023"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
@@ -33,86 +34,86 @@
         android:id="@+id/dateText"
         android:layout_width="183dp"
         android:layout_height="36dp"
-        android:text="Date(DD.MM.YYYY)"
+        android:text="Date(D.M.Y)"
         android:textSize="20dp"
         app:layout_constraintBottom_toTopOf="@+id/date"
         app:layout_constraintStart_toStartOf="@+id/date" />
 
 
-    <EditText
-        android:id="@+id/weight"
-        android:layout_width="239dp"
-        android:layout_height="55dp"
-        android:layout_marginTop="244dp"
-        android:ems="10"
-        android:text="0"
-        android:textAlignment="center"
-        android:inputType="number"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+<EditText
+android:id="@+id/weight"
+android:layout_width="239dp"
+android:layout_height="55dp"
+android:layout_marginTop="244dp"
+android:ems="10"
+android:text="0"
+android:textAlignment="center"
+android:inputType="number"
+app:layout_constraintEnd_toEndOf="parent"
+app:layout_constraintStart_toStartOf="parent"
+app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/weightText"
-        android:layout_width="112dp"
-        android:layout_height="31dp"
-        android:text="Weight(kg)"
-        android:textSize="20dp"
-        app:layout_constraintBottom_toTopOf="@+id/weight"
-        app:layout_constraintStart_toStartOf="@+id/weight" />
+<TextView
+android:id="@+id/weightText"
+android:layout_width="112dp"
+android:layout_height="31dp"
+android:text="Weight(kg)"
+android:textSize="20dp"
+app:layout_constraintBottom_toTopOf="@+id/weight"
+app:layout_constraintStart_toStartOf="@+id/weight" />
 
-    <EditText
-        android:id="@+id/series"
-        android:layout_width="239dp"
-        android:layout_height="55dp"
-        android:layout_marginTop="496dp"
-        android:ems="10"
-        android:inputType="number"
-        android:text="1"
-        android:textAlignment="center"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+<EditText
+android:id="@+id/series"
+android:layout_width="239dp"
+android:layout_height="55dp"
+android:layout_marginTop="496dp"
+android:ems="10"
+android:inputType="number"
+android:text="1"
+android:textAlignment="center"
+app:layout_constraintEnd_toEndOf="parent"
+app:layout_constraintStart_toStartOf="parent"
+app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/seriesText"
-        android:layout_width="112dp"
-        android:layout_height="31dp"
-        android:text="Series"
-        android:textSize="20dp"
-        app:layout_constraintBottom_toTopOf="@+id/series"
-        app:layout_constraintStart_toStartOf="@+id/series" />
+<TextView
+android:id="@+id/seriesText"
+android:layout_width="112dp"
+android:layout_height="31dp"
+android:text="Series"
+android:textSize="20dp"
+app:layout_constraintBottom_toTopOf="@+id/series"
+app:layout_constraintStart_toStartOf="@+id/series" />
 
-    <EditText
-        android:id="@+id/reps"
-        android:layout_width="239dp"
-        android:layout_height="55dp"
-        android:layout_marginTop="368dp"
-        android:ems="10"
-        android:inputType="number"
-        android:text="1"
-        android:textAlignment="center"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+<EditText
+android:id="@+id/reps"
+android:layout_width="239dp"
+android:layout_height="55dp"
+android:layout_marginTop="368dp"
+android:ems="10"
+android:inputType="number"
+android:text="1"
+android:textAlignment="center"
+app:layout_constraintEnd_toEndOf="parent"
+app:layout_constraintStart_toStartOf="parent"
+app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/repsText"
-        android:layout_width="112dp"
-        android:layout_height="31dp"
-        android:text="Reps"
-        android:textSize="20dp"
-        app:layout_constraintBottom_toTopOf="@+id/reps"
-        app:layout_constraintStart_toStartOf="@+id/reps" />
+<TextView
+android:id="@+id/repsText"
+android:layout_width="112dp"
+android:layout_height="31dp"
+android:text="Reps"
+android:textSize="20dp"
+app:layout_constraintBottom_toTopOf="@+id/reps"
+app:layout_constraintStart_toStartOf="@+id/reps" />
 
-    <TextView
-        android:id="@+id/exerciseText"
-        android:layout_width="239dp"
-        android:layout_height="45dp"
-        android:text="Exercise"
-        android:textSize="35dp"
-        android:textAlignment="center"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+<TextView
+android:id="@+id/exerciseText"
+android:layout_width="239dp"
+android:layout_height="45dp"
+android:text="Exercise"
+android:textSize="35dp"
+android:textAlignment="center"
+app:layout_constraintEnd_toEndOf="parent"
+app:layout_constraintStart_toStartOf="parent"
+app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>

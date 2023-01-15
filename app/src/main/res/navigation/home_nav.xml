@@ -8,7 +8,7 @@
     <fragment
         android:id="@+id/fragmentHome"
         android:name="com.example.wgg_v01.fragments.home.HomeFragment"
-        android:label="fragment_home"
+        android:label="Menu"
         tools:layout="@layout/fragment_home" >
         <action
             android:id="@+id/action_fragmentHome_to_trainType"
@@ -23,7 +23,7 @@
     <fragment
         android:id="@+id/trainType"
         android:name="com.example.wgg_v01.fragments.home.TrainType"
-        android:label="fragment_train_type"
+        android:label="Exercise performed"
         tools:layout="@layout/fragment_train_type" >
         <action
             android:id="@+id/action_trainType_to_fragmentHome"
@@ -35,7 +35,7 @@
     <fragment
         android:id="@+id/calendar"
         android:name="com.example.wgg_v01.CalendarActivity"
-        android:label="fragment_calendar"
+        android:label="Calendar"
         tools:layout="@layout/activity_calendar" >
         <action
             android:id="@+id/action_calendar_to_fragmentHome"
@@ -44,7 +44,7 @@
     <fragment
         android:id="@+id/setPerfFragment"
         android:name="com.example.wgg_v01.fragments.home.SetPerfFragment"
-        android:label="fragment_set_perf"
+        android:label="Add performance"
         tools:layout="@layout/fragment_set_perf" >
         <action
             android:id="@+id/action_setPerfFragment_to_trainType"
@@ -53,7 +53,7 @@
     <fragment
         android:id="@+id/performanceFragment"
         android:name="com.example.wgg_v01.fragments.performance.performanceFragment"
-        android:label="performanceFragment"
+        android:label="Type of exercise"
         tools:layout="@layout/fragment_performance">
         <action
             android:id="@+id/action_performanceFragment_to_fragmentHome"
@@ -61,11 +61,14 @@
         <action
             android:id="@+id/action_performanceFragment_to_allPerfFragment"
             app:destination="@id/allPerfFragment" />
+        <action
+            android:id="@+id/action_performanceFragment_to_exeDataFragment"
+            app:destination="@id/exeDataFragment" />
     </fragment>
     <fragment
         android:id="@+id/allPerfFragment"
         android:name="com.example.wgg_v01.fragments.performance.allPerfFragment"
-        android:label="allPerfFragment"
+        android:label="Recent performances"
         tools:layout="@layout/fragment_all_perf">
         <action
             android:id="@+id/action_allPerfFragment_to_performanceFragment"
@@ -77,10 +80,34 @@
     <fragment
         android:id="@+id/perfData"
         android:name="com.example.wgg_v01.fragments.performance.PerfData"
-        android:label="fragment_perf_data"
+        android:label="Performances"
         tools:layout="@layout/fragment_perf_data" >
         <action
             android:id="@+id/action_perfData_to_allPerfFragment"
             app:destination="@id/allPerfFragment" />
+        <action
+            android:id="@+id/action_perfData_to_updateFragment"
+            app:destination="@id/updateFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/updateFragment"
+        android:name="com.example.wgg_v01.fragments.performance.UpdateFragment"
+        android:label="Update exercise"
+        tools:layout="@layout/fragment_update">
+        <action
+            android:id="@+id/action_updateFragment_to_perfData"
+            app:destination="@id/perfData" />
+        <argument
+            android:name="currentPerf"
+            app:argType="com.example.wgg_v01.data.realtions.UserExerciseRef" />
+    </fragment>
+    <fragment
+        android:id="@+id/exeDataFragment"
+        android:name="com.example.wgg_v01.fragments.performance.ExeDataFragment"
+        android:label="fragment_exe_data"
+        tools:layout="@layout/fragment_exe_data" >
+        <action
+            android:id="@+id/action_exeDataFragment_to_performanceFragment"
+            app:destination="@id/performanceFragment" />
     </fragment>
 </navigation>

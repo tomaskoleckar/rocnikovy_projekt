@@ -8,7 +8,10 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.example.wgg_v01.CalendarActivity
+import com.example.wgg_v01.MainActivity
+import com.example.wgg_v01.MyApp.Companion.loggedUser
 import com.example.wgg_v01.R
+import com.example.wgg_v01.fragments.login.Login
 import kotlinx.android.synthetic.main.fragment_home.view.*
 
 class HomeFragment : Fragment() {
@@ -32,6 +35,12 @@ class HomeFragment : Fragment() {
 
         view.performanceBtn.setOnClickListener{
             findNavController().navigate(R.id.action_fragmentHome_to_performanceFragment)
+        }
+
+        view.logoutBtn.setOnClickListener{
+            loggedUser = "none"
+            val intent = Intent(context, MainActivity::class.java)
+            startActivity(intent)
         }
 
 

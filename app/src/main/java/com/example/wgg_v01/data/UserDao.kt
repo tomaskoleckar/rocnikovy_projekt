@@ -2,10 +2,12 @@ package com.example.wgg_v01.data
 
 import androidx.lifecycle.LiveData
 import androidx.room.Dao
+import androidx.room.Delete
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
 import androidx.room.Transaction
+import androidx.room.Update
 import com.example.wgg_v01.data.realtions.UserExerciseRef
 import com.example.wgg_v01.data.realtions.UserWithExercises
 
@@ -22,6 +24,12 @@ interface UserDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertUserExerciseRef(crossRef: UserExerciseRef)
 
+    @Update
+    suspend fun updatePerf(crossRef: UserExerciseRef)
+
+    @Delete
+    suspend fun deletePerf(crossRef: UserExerciseRef)
+
     @Query("SELECT * FROM users ORDER BY userId ASC")
     fun readAllData(): LiveData<List<User>>
 
@@ -32,10 +40,12 @@ interface UserDao {
     fun readAllExe(): LiveData<List<Exercise>>
 
     @Transaction
-    @Query("SELECT * FROM usersRef")
+    @Query("SELECT * FROM usersRef ORDER BY date DESC,exercisePart")
     fun getExercisesOfUsers(): LiveData<List<UserExerciseRef>>
 
-    @Query("SELECT * FROM usersRef WHERE userId = :userId AND exerciseName = :exerciseName ORDER BY userExId")
-    fun getPerfData(userId: Int, exerciseName: String): LiveData<List<UserExerciseRef>>
+    @Query("SELECT * FROM usersRef WHERE userId = :userId AND exerciseName = :exerciseName AND date = :date ORDER BY userExId")
+    fun getPerfData(userId: Int, exerciseName: String, date: String): LiveData<List<UserExerciseRef>>
 
+    @Query("SELECT * FROM usersRef WHERE userId = :userId AND exerciseName = :exerciseName ORDER BY userExId DESC")
+    fun getExeData(userId: Int, exerciseName: String): LiveData<List<UserExerciseRef>>
 }

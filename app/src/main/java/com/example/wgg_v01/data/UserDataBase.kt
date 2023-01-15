@@ -9,7 +9,7 @@ import com.example.wgg_v01.data.realtions.UserExerciseRef
 import com.example.wgg_v01.data.realtions.UserWithExercises
 
 
-@Database(entities = [User::class,Exercise::class,UserExerciseRef::class], version = 3, exportSchema = false)
+@Database(entities = [User::class,Exercise::class,UserExerciseRef::class], version = 1, exportSchema = false)
 abstract class UserDataBase: RoomDatabase(){
 
     abstract fun userDao(): UserDao

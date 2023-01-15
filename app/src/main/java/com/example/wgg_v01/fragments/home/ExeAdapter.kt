@@ -1,12 +1,14 @@
 package com.example.wgg_v01.fragments.home
 
 
+import android.content.res.Resources
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.example.wgg_v01.MyApp.Companion.currentFragment
 import com.example.wgg_v01.R
 import com.example.wgg_v01.data.Exercise
@@ -24,17 +26,24 @@ class ExeAdapter() : RecyclerView.Adapter<ExeAdapter.MyViewHolder>() {
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         val currentItem = exeList[position]
-        holder.itemView.exercise1.text = currentItem.name
-        holder.itemView.exercise1.setOnClickListener(){
+        val imageName = currentItem.name.replace(" ", "").toLowerCase()
+        println(imageName)
+        val resources = holder.itemView.resources
+        val resourceId = resources.getIdentifier(imageName, "drawable", holder.itemView.context.packageName)
+        Glide.with(holder.itemView.context).load(resourceId).into(holder.itemView.imageView)
+
+        holder.itemView.textView2.text = currentItem.name
+        holder.itemView.textView9.text = currentItem.part
+        holder.itemView.setOnClickListener(){
             val bundle = Bundle()
-            bundle.putString("exerciseName", holder.itemView.exercise1.text.toString())
+            bundle.putString("exerciseName", currentItem.name)
             bundle.putString("exePart", currentItem.part)
             if(currentFragment == "train") {
                 holder.itemView.findNavController()
                     .navigate(R.id.action_trainType_to_setPerfFragment, bundle)
             }
             else if(currentFragment == "perf"){
-
+                holder.itemView.findNavController().navigate(R.id.action_performanceFragment_to_exeDataFragment, bundle )
             }
         }
 
